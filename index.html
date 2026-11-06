@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Discover beautiful beaches, historic temples and amazing countries with Travel Explorer.">
+  <title>Travel Explorer | Discover the World</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="logo" href="#home" aria-label="Travel Explorer home"><span class="logo-mark">✦</span> travel<span>explorer</span></a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+    <nav class="nav-links" id="navLinks">
+      <a href="#home" class="active">Home</a>
+      <a href="#about">About Us</a>
+      <a href="#contact">Contact Us</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-shade"></div>
+      <div class="hero-content">
+        <p class="eyebrow light">YOUR NEXT ADVENTURE STARTS HERE</p>
+        <h1>Explore the world.<br><em>Find your place.</em></h1>
+        <p class="hero-copy">Discover beautiful destinations, unforgettable beaches and remarkable places around the globe.</p>
+        <a class="primary-button" href="#recommendations">Explore destinations <span>→</span></a>
+        <div class="search-panel" role="search">
+          <label class="sr-only" for="searchInput">Search destinations</label>
+          <input id="searchInput" type="search" placeholder="Search beach, temple, country..." autocomplete="off">
+          <button id="searchButton" class="search-button">Search</button>
+          <button id="resetButton" class="reset-button" type="button">Reset</button>
+        </div>
+        <p class="search-hint">Try: beach, temple, Japan, Thailand, or country</p>
+      </div>
+      <div class="hero-note"><span>✧</span> Collect moments, not things.</div>
+    </section>
+
+    <section class="intro section-wrap" id="recommendations">
+      <div>
+        <p class="eyebrow">TRAVEL INSPIRATION</p>
+        <h2>Where would you<br>like to go next?</h2>
+      </div>
+      <p class="intro-copy">From peaceful coastlines to ancient architecture, explore hand-picked ideas for your next journey.</p>
+    </section>
+
+    <section class="recommendations section-wrap" aria-live="polite">
+      <div class="section-heading">
+        <div><p class="eyebrow">MAKE YOUR DREAM TRIP</p><h2>Recommended for you</h2></div>
+        <span id="resultCount" class="result-count">6 destinations</span>
+      </div>
+      <div id="recommendationGrid" class="card-grid">
+        <article class="destination-card" data-category="beach">
+          <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=900&q=85" alt="Tropical beach with turquoise water">
+          <div class="card-body"><span class="tag">BEACH</span><h3>Maldives</h3><p>Clear blue water, white sand and peaceful island views.</p></div>
+        </article>
+        <article class="destination-card" data-category="beach">
+          <img src="https://images.unsplash.com/photo-1510414842594-a61c69b5ae57?auto=format&fit=crop&w=900&q=85" alt="Beautiful tropical beach destination">
+          <div class="card-body"><span class="tag">BEACH</span><h3>Bali, Indonesia</h3><p>Relax on beautiful beaches and enjoy island culture.</p></div>
+        </article>
+        <article class="destination-card" data-category="temple">
+          <img src="https://images.unsplash.com/photo-1606293926075-69a00db1f9b7?auto=format&fit=crop&w=900&q=85" alt="Historic temple architecture in Asia">
+          <div class="card-body"><span class="tag">TEMPLE</span><h3>Angkor Wat, Cambodia</h3><p>Explore remarkable architecture and ancient history.</p></div>
+        </article>
+        <article class="destination-card" data-category="temple">
+          <img src="https://images.unsplash.com/photo-1548013146-72479768bada?auto=format&fit=crop&w=900&q=85" alt="Temple complex surrounded by nature">
+          <div class="card-body"><span class="tag">TEMPLE</span><h3>Kyoto, Japan</h3><p>Discover traditional temples and tranquil gardens.</p></div>
+        </article>
+        <article class="destination-card" data-category="country">
+          <img src="https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?auto=format&fit=crop&w=900&q=85" alt="Traditional street in Japan">
+          <div class="card-body"><span class="tag">COUNTRY</span><h3>Japan</h3><p>A blend of modern cities, nature and traditions.</p></div>
+        </article>
+        <article class="destination-card" data-category="country">
+          <img src="https://images.unsplash.com/photo-1503899036084-c55cdd92da26?auto=format&fit=crop&w=900&q=85" alt="City skyline in Thailand">
+          <div class="card-body"><span class="tag">COUNTRY</span><h3>Thailand</h3><p>Experience vibrant markets, islands and local food.</p></div>
+        </article>
+      </div>
+      <p id="emptyMessage" class="empty-message" hidden>No destinations found. Try “beach”, “temple” or “country”.</p>
+    </section>
+
+    <section class="about-section" id="about">
+      <div class="about-image">
+        <img src="https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?auto=format&fit=crop&w=1100&q=85" alt="A beautiful lake and mountain travel destination">
+        <div class="image-stamp">GO<br>EXPLORE</div>
+      </div>
+      <div class="about-copy">
+        <p class="eyebrow">OUR STORY</p>
+        <h2>Travel brings<br>the world closer.</h2>
+        <p>Travel Explorer is a simple travel recommendation website created to help people discover inspiring destinations around the world.</p>
+        <p>Our goal is to make travel inspiration easy to find. Browse beach destinations, explore historic temples and discover countries you may want to visit.</p>
+        <div class="about-points">
+          <div><strong>01</strong><span>Discover new places</span></div>
+          <div><strong>02</strong><span>Find travel inspiration</span></div>
+          <div><strong>03</strong><span>Plan your next adventure</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact-section section-wrap" id="contact">
+      <div class="contact-intro">
+        <p class="eyebrow">GET IN TOUCH</p>
+        <h2>Let's talk about<br>your next trip.</h2>
+        <p>Have a question or a destination suggestion? Send us a message using the form.</p>
+        <p class="contact-detail">✉ &nbsp; hello@travelexplorer.example</p>
+      </div>
+      <form class="contact-form" id="contactForm">
+        <label for="name">Your name</label>
+        <input id="name" name="name" type="text" placeholder="Enter your name" required>
+        <label for="email">Email address</label>
+        <input id="email" name="email" type="email" placeholder="you@example.com" required>
+        <label for="message">Your message</label>
+        <textarea id="message" name="message" rows="5" placeholder="Tell us what's on your mind..." required></textarea>
+        <button class="primary-button form-button" type="submit">Send message <span>→</span></button>
+        <p id="formMessage" class="form-message" role="status"></p>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <a class="logo footer-logo" href="#home"><span class="logo-mark">✦</span> travel<span>explorer</span></a>
+    <p>Discover places. Create memories.</p>
+    <span>© 2026 Travel Explorer. Educational project.</span>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
